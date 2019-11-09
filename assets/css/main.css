@@ -1,0 +1,138 @@
+* {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0px;
+}
+a#home:link {
+  color: black;
+}
+
+a#home:visited {
+  color: black;
+}
+
+a#home:hover {
+  color: black;
+}
+
+a#home:active {
+  color: black;
+}
+
+main {
+	margin: 0 5% 0 5%;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	padding: 2em 2em 1em 2em;
+}
+
+section {
+	display: flex;
+	justify-content: space-around;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 4em 2em 0em 2em;
+}
+
+@media screen and (max-width: 400px) {
+	section.social {
+		padding: 2em 0em 0em 0em;
+	}
+}
+
+section.person {
+	flex-direction: row;
+	background: white;
+	padding: 3em 2em 0em 2em;
+}
+
+@media screen and (max-width: 400px) {
+	section.person {
+		padding: 3em 0em 0em 0em;
+	}
+}
+
+section.about {
+	flex-direction: column;
+	background: white;
+	padding: 2em 2em 0em 2em;
+}
+
+div.logo-text {
+	flex-direction: column;
+	text-align: right;
+	text-transform: uppercase;
+	font-size: 1.85em;
+  letter-spacing: 0.22em;
+}
+
+div.logo-text h1 {
+	font-size: 1.2em;
+  letter-spacing: 0.22em;
+}
+
+div.logo-text h2 {
+	font-size: 0.8em;
+  letter-spacing: 0.12em;
+}
+
+.avatar {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	margin: auto 0 auto 0;
+}
+
+.icon {
+	text-decoration: none;
+	position: relative;
+	display: block;
+	width: 3.75em;
+	height: 3.75em;
+	border-radius: 100%;
+	border: solid 1px #c8cccf;
+	line-height: 3.75em;
+	overflow: hidden;
+	text-align: center;
+	text-indent: 3.75em;
+	white-space: nowrap;
+	color: gray
+}
+.icon::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: inherit;
+	height: inherit;
+	font-size: 1.85rem;
+	line-height: inherit;
+	text-align: center;
+	text-indent: 0;
+}
+
+.fa, .fab, .fad, .fal, .far, .fas {
+	line-height: 3.75em;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #7557e4;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
