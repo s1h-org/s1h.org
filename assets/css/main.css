@@ -55,7 +55,7 @@ section {
 
 @media screen and (max-width: 600px) {
     section.social {
-        padding: 2em 0em 0em 0em;
+        padding: 2em 0em 2em 0em;
     }
 }
 
@@ -65,7 +65,7 @@ section.person, section.social {
 
 @media screen and (max-width: 600px) {
     section.person {
-        padding: 3em 0em 0em 0em;
+        padding: 3em 0em 3em 0em;
     }
 }
 
