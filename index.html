@@ -9,16 +9,71 @@
 	<link rel="stylesheet" href="/assets/css/fontawesome.all.min.css" />
 	<link rel="stylesheet" href="/assets/css/main.css" />
 	<link rel="icon" href="/favicon.ico?v=1" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156092675-2"></script>
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag("js", new Date());
-
-		gtag("config", "UA-156092675-2");
+		window.addEventListener("load", function () {
+			window.cookieconsent.initialise({
+				palette: {
+					popup: {
+						background: "#eaf7f7",
+						text: "#5c7291"
+					},
+					button: {
+						background: "#56cbdb",
+						text: "#ffffff"
+					}
+				},
+				theme: "classic",
+				position: "bottom-right",
+				type: "opt-out",
+				revokable: true,
+				onInitialized: function () {
+					if (this.hasConsented()) {
+						const scriptTag = document.createElement("script");
+						scriptTag.id = "analytics";
+						scriptTag.async = true;
+						scriptTag.src =
+							"https://www.googletagmanager.com/gtag/js?id=UA-156092675-1";
+						document.head.appendChild(scriptTag);
+						window.dataLayer = window.dataLayer || [];
+						function gtag() {
+							dataLayer.push(arguments);
+						}
+						gtag("js", new Date());
+						gtag("config", "UA-156092675-1");
+					} else {
+						const analyticsTag = document.getElementById("analytics");
+						if (analyticsTag) {
+							document.head.removeChild(analyticsTag);
+						}
+					}
+				},
+				onStatusChange: function () {
+					if (this.hasConsented()) {
+						const scriptTag = document.createElement("script");
+						scriptTag.id = "analytics";
+						scriptTag.async = true;
+						scriptTag.src =
+							"https://www.googletagmanager.com/gtag/js?id=UA-156092675-1";
+						document.head.appendChild(scriptTag);
+						window.dataLayer = window.dataLayer || [];
+						function gtag() {
+							dataLayer.push(arguments);
+						}
+						gtag("js", new Date());
+						gtag("config", "UA-156092675-1");
+					} else {
+						const analyticsTag = document.getElementById("analytics");
+						if (analyticsTag) {
+							document.head.removeChild(analyticsTag);
+						}
+					}
+				},
+				secure: true
+			});
+		});
 	</script>
 </head>
 
@@ -57,7 +112,8 @@
 				talks and workshops at
 				<a href="https://jscraftcamp.org/">JSCraftCamp</a>,
 				<a href="https://www.softwerkskammer.org/groups/ruhrgebiet">Softwerkskammer Ruhrgebiet</a>,
-				<a href="https://www.softwerkskammer.org/groups/jena">Softwerkskammer Thüringen</a>, various internal workshops
+				<a href="https://www.softwerkskammer.org/groups/jena">Softwerkskammer Thüringen</a>, various internal
+				workshops
 				at
 				<a href="https://consol.de">my current company</a> and I
 				used to teach an introductory CS course for first year
@@ -82,7 +138,8 @@
 			</p>
 			<p class="text-content text-content--centered">
 				I'm also a huge fan of
-				<a href="https://developers.google.com/web/progressive-web-apps/">Progressive Web Apps</a>, which I have already
+				<a href="https://developers.google.com/web/progressive-web-apps/">Progressive Web Apps</a>, which I have
+				already
 				built a few of. Often times a PWA is
 				able to achieve the same results as a native app while being
 				smaller in size and faster to install. There is still space
