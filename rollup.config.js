@@ -65,6 +65,7 @@ export default {
 			// stringify the object       
 			process: JSON.stringify({
 				env: {
+					...process.env,
 					isProd: production,
 					...config().parsed // attached the .env config
 				}
