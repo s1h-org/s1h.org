@@ -6,7 +6,7 @@
     onMount(async () => {
         try {
             const res = await fetch(
-                `${__s1h.env.BLOG_URL}${__s1h.env.POST_API}?key=${__s1h.env.GHOST_CONTENT_KEY}&limit=${__s1h.env.POST_LIMIT}`
+                `${process.env.BLOG_URL}${process.env.POST_API}?key=${process.env.GHOST_CONTENT_KEY}&limit=${process.env.POST_LIMIT}`
             );
             posts = await res.json().then(content => content.posts);
         } catch (e) {}
