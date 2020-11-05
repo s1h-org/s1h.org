@@ -2,6 +2,11 @@
     import TypedJs from "@loscrackitos/svelte-typed-js";
     import Icon from "svelte-awesome";
     import { angleDoubleDown } from "svelte-awesome/icons";
+
+    function scrollToAbout(e) {
+        const aboutSection = document.getElementById("about");
+        aboutSection.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
 </script>
 
 <style>
@@ -64,5 +69,5 @@
                     class="typing font-alt text-3xl md:text-6xl text-teal-600 font-extrabold" /></span>
         </TypedJs>
     </div>
-    <a class="arrow" href="#about"><Icon data={angleDoubleDown} scale={3} /></a>
+    <a class="arrow" href="#about" on:click={scrollToAbout}><Icon data={angleDoubleDown} scale={3} /></a>
 </section>

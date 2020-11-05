@@ -2,6 +2,12 @@
 	import Navbar from "./Navbar.svelte";
 	import Main from "./Main.svelte";
 	import Footer from "./Footer.svelte";
+	import smoothscroll from "smoothscroll-polyfill";
+	import { onMount } from "svelte";
+
+	onMount(() => {
+		smoothscroll.polyfill();
+	});
 </script>
 
 <style global>
