@@ -6,7 +6,8 @@
     <SectionHeader heading={'About Me'} />
     <h3 class="text-4xl text-center mt-16">Hi 👋, I'm Simon!</h3>
     <p class="text-md lg:text-lg text-center pt-4 pl-4 pr-4">
-        I'm a software engineer currently living and working in Munich, Germany.
+        I'm a software engineer living and working remotely in a small village in southern Bavaria, Germany.
+        I'm the happy husband of my lovely wife and the proud father of my son.
     </p>
     <p class="text-md lg:text-lg text-center pt-4 pl-4 pr-4">
         I've been fascinated by computers since my early childhood, but
