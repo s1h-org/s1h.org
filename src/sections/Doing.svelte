@@ -2,7 +2,7 @@
     import SectionHeader from "../SectionHeader.svelte";
 </script>
 
-<section id="doing" class="w-full h-full pt-16">
+<section id="doing" class="w-full md:w-2/3 lg:w-1/2 h-full pt-16">
     <SectionHeader heading={'What I do'} />
     <p class="text-md lg:text-lg text-center pt-4 pl-4 lg:pl-8 pr-4 lg:pr-8">
         I'm not a fan of terms like "rockstar developer" or anything similar.

@@ -2,7 +2,7 @@
     import SectionHeader from "../SectionHeader.svelte";
 </script>
 
-<section id="about" class="w-full h-full pt-16">
+<section id="about" class="w-full md:w-2/3 lg:w-1/2 h-full pt-16">
     <SectionHeader heading={'About Me'} />
     <h3 class="text-4xl text-center mt-16">Hi 👋, I'm Simon!</h3>
     <p class="text-md lg:text-lg text-center pt-4 pl-4 pr-4">

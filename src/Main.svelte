@@ -6,7 +6,7 @@
     import Building from "./sections/Building.svelte";
 </script>
 
-<main>
+<main class="flex flex-col items-center">
     <Hero />
     <About />
     <Doing />
